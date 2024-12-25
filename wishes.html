@@ -1,51 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lời Chúc</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 20px;
-      background: linear-gradient(to bottom, #fad0c4, #ff9a9e);
-      font-family: Arial, sans-serif;
-      color: #333;
-    }
-    .title {
-      font-size: 36px;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 20px;
-      color: #ff577f;
-    }
-    .content {
-      font-size: 20px;
-      line-height: 1.6;
-      text-align: justify;
-    }
-    .back-button {
-      display: block;
-      margin: 20px auto;
-      padding: 10px 20px;
-      font-size: 18px;
-      text-align: center;
-      background: #ff577f;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      width: 150px;
-    }
-    .back-button:hover {
-      background: #e63950;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>from hải anh with luv</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .sparkle {
+            font-family: 'Comic Sans MS', sans-serif;
+            font-size: 50px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #f39, 0 0 20px #f39, 0 0 40px #f39, 0 0 60px #f39;
+            animation: sparkle 2s infinite;
+            margin-bottom: 20px;
+        }
+
+        .nosparkle {
+            padding: 0 5rem;
+            font-family: 'Comic Sans MS', sans-serif;
+            font-size: 50px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #f39, 0 0 20px #f39, 0 0 40px #f39, 0 0 60px #f39;
+            /* animation: sparkle 2s infinite; */
+            margin-bottom: 20px;
+        }
+
+        @keyframes sparkle {
+
+            0%,
+            100% {
+                text-shadow: 0 0 5px #fff, 0 0 10px #f39, 0 0 20px #f39, 0 0 40px #f39, 0 0 60px #f39;
+            }
+
+            50% {
+                text-shadow: 0 0 10px #ff9, 0 0 20px #ff9, 0 0 30px #ff9, 0 0 50px #ff9, 0 0 70px #ff9;
+            }
+        }
+
+        .balloons {
+            z-index: -5;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .balloon {
+            position: absolute;
+            width: 50px;
+            height: 70px;
+            background: radial-gradient(circle, #ff577f, #ff9a9e);
+            border-radius: 50%;
+            animation: float 10s linear infinite;
+            opacity: 0.7;
+        }
+
+        .balloon::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            width: 2px;
+            height: 30px;
+            background: #fff;
+            transform: translateX(-50%);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) scale(0.8);
+                opacity: 0;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            color: #fff;
+            background: #ff577f;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .button:hover {
+            background: #e63950;
+        }
+
+        .flower {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: url('star.png') no-repeat center;
+            background-size: contain;
+            pointer-events: none;
+            animation: flowerFade 1s ease-out forwards;
+        }
+
+        @keyframes flowerFade {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <div class="title">from my đáy lòng..</div>
-  <div class="content">
-    
-  </div>
-  <a href="anni.html" class="back-button">back</a>
+    <div class="sparkle">finally.. 🎉</div>
+    <div class="nosparkle">Chúc m năm mới khỏe mạnh, ko ốm đau bệnh tật, ko đau lưng mỏi gối tê tay, ko thoái hóa, thoát vị, ko đau mắt, ko trĩ.</div>
+    <div class="nosparkle">Chúc m tuổi 20 giữ được, tìm được nhiệt huyết với nghề. Thuận lợi tốt nghiệp, đi làm ko bị dl đì.</div>
+    <div class="nosparkle">Chúc m ko chỉ tuổi mới mà cả đời đều bình an.</div>
+    <div class="buttons">
+    </div>
+    <div class="balloons">
+        <div class="balloon" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="balloon" style="left: 20%; animation-delay: 1s;"></div>
+        <div class="balloon" style="left: 30%; animation-delay: 2s;"></div>
+        <div class="balloon" style="left: 40%; animation-delay: 3s;"></div>
+        <div class="balloon" style="left: 50%; animation-delay: 0s;"></div>
+        <div class="balloon" style="left: 60%; animation-delay: 1s;"></div>
+        <div class="balloon" style="left: 70%; animation-delay: 2s;"></div>
+        <div class="balloon" style="left: 80%; animation-delay: 3s;"></div>
+        <div class="balloon" style="left: 90%; animation-delay: 0s;"></div>
+    </div>
+
+    <script>
+        document.addEventListener('mousemove', function (e) {
+            const flower = document.createElement('div');
+            flower.classList.add('flower');
+            flower.style.left = `${e.pageX}px`;
+            flower.style.top = `${e.pageY}px`;
+            document.body.appendChild(flower);
+
+            // Remove flower after animation
+            setTimeout(() => {
+                flower.remove();
+            }, 1000);
+        });
+    </script>
 </body>
+
 </html>
