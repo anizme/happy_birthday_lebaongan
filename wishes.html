@@ -20,22 +20,26 @@
 
         .sparkle {
             font-family: 'Comic Sans MS', sans-serif;
-            font-size: 50px;
+            font-size: 4vw;
+            /* Responsive font size */
             font-weight: bold;
             color: #fff;
+            text-align: center;
             text-shadow: 0 0 5px #fff, 0 0 10px #f39, 0 0 20px #f39, 0 0 40px #f39, 0 0 60px #f39;
             animation: sparkle 2s infinite;
             margin-bottom: 20px;
+            padding: 0 10px;
+            /* Padding to prevent text from touching edges */
         }
 
         .nosparkle {
             padding: 0 5rem;
             font-family: 'Comic Sans MS', sans-serif;
-            font-size: 50px;
+            font-size: 3vw;
+            /* Responsive font size */
             font-weight: bold;
             color: #fff;
             text-shadow: 0 0 5px #fff, 0 0 10px #f39, 0 0 20px #f39, 0 0 40px #f39, 0 0 60px #f39;
-            /* animation: sparkle 2s infinite; */
             margin-bottom: 20px;
         }
 
@@ -61,8 +65,10 @@
 
         .balloon {
             position: absolute;
-            width: 50px;
-            height: 70px;
+            width: 5vw;
+            /* Responsive size */
+            height: 7vw;
+            /* Responsive size */
             background: radial-gradient(circle, #ff577f, #ff9a9e);
             border-radius: 50%;
             animation: float 10s linear infinite;
@@ -72,10 +78,10 @@
         .balloon::after {
             content: '';
             position: absolute;
-            bottom: -20px;
+            bottom: -10%;
             left: 50%;
             width: 2px;
-            height: 30px;
+            height: 10%;
             background: #fff;
             transform: translateX(-50%);
         }
@@ -94,12 +100,15 @@
 
         .buttons {
             display: flex;
-            gap: 15px;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
         }
 
         .button {
             padding: 10px 20px;
-            font-size: 18px;
+            font-size: 2vw;
+            /* Responsive font size */
             font-family: Arial, sans-serif;
             font-weight: bold;
             color: #fff;
@@ -118,9 +127,11 @@
 
         .flower {
             position: absolute;
-            width: 30px;
-            height: 30px;
-            background: url('star.png') no-repeat center;
+            width: 5vw;
+            /* Responsive size */
+            height: 5vw;
+            /* Responsive size */
+            background: url('love.png') no-repeat center;
             background-size: contain;
             pointer-events: none;
             animation: flowerFade 1s ease-out forwards;
@@ -142,8 +153,10 @@
 
 <body>
     <div class="sparkle">finally.. 🎉</div>
-    <div class="nosparkle">Chúc m năm mới khỏe mạnh, ko ốm đau bệnh tật, ko đau lưng mỏi gối tê tay, ko thoái hóa, thoát vị, ko đau mắt, ko trĩ.</div>
-    <div class="nosparkle">Chúc m tuổi 20 giữ được, tìm được nhiệt huyết với nghề. Thuận lợi tốt nghiệp, đi làm ko bị dl đì.</div>
+    <div class="nosparkle">Chúc m năm mới khỏe mạnh, ko ốm đau bệnh tật, ko đau lưng mỏi gối tê tay, ko thoái hóa, thoát
+        vị, ko đau mắt, ko trĩ.</div>
+    <div class="nosparkle">Chúc m tuổi 20 giữ được, tìm được nhiệt huyết với nghề. Thuận lợi tốt nghiệp, đi làm ko bị dl
+        đì.</div>
     <div class="nosparkle">Chúc m ko chỉ tuổi mới mà cả đời đều bình an.</div>
     <div class="buttons">
     </div>
